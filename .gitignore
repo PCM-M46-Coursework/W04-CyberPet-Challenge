@@ -1,15 +1,3 @@
-# - Administration
-.admin/
-.vscode/
-.sandbox/
-
-# - Coursework Submissions
-.repos/
-
-# - Data Protected Folders
-[Rr]ecordings/
-[Aa]ssignments/
-
 # - Node.js Modules
 node_modules/
 .env/
