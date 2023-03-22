@@ -1,2 +1,0 @@
-Mezz woz 'ere
-git checkout -b $branchName
