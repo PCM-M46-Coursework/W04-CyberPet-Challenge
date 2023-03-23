@@ -1,3 +1,5 @@
+startButton = document.getElementById("idStart");
+startButton.addEventListener("click", startGame());
 
 function startGame(){
     localStorage.setItem("name", document.getElementById("idName").value);

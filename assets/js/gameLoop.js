@@ -33,10 +33,10 @@ function makePet(){
 
 // Button Code
 //react to button presses by calling appropriate update methods of objPet
-document.getElementById("idButtonName1").addEventListener(fnUpdateThing1());
-document.getElementById("idButtonName2").addEventListener(fnUpdateThing2());
-document.getElementById("idButtonName3").addEventListener(fnUpdateThing3());
-document.getElementById("idButtonName4").addEventListener(fnUpdateThing4());
+document.getElementById("idButtonName1").addEventListener("click", fnUpdateThing1());
+document.getElementById("idButtonName2").addEventListener("click", fnUpdateThing2());
+document.getElementById("idButtonName3").addEventListener("click", fnUpdateThing3());
+document.getElementById("idButtonName4").addEventListener("click", fnUpdateThing4());
 
 function fnUpdateThing1(){
     objPet.updateThing1();
