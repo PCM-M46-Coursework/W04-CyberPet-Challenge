@@ -1,4 +1,0 @@
-hello world 
-
-goodbye!
-Set your username: git config --global user.name "FIRST_NAME LAST_NAME"
