@@ -1,5 +1,5 @@
-import '#~/src/prototype';
-import { Statistic } from './Statistic';
+import '../prototype/Number.prototype.js';
+import { Statistic } from './Statistic.js';
 
 /**
  * Acts as a base class for all creatures provided as choices for the game.

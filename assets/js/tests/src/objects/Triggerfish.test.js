@@ -1,5 +1,5 @@
-import '#~/src/prototype';
-import { Triggerfish, _options } from '../../../src/objects/Triggerfish';
+import '../../../src/prototype/Number.prototype.js';
+import { Triggerfish, _options } from '../../../src/objects/Triggerfish.js';
 
 /**
  * @memberof Jest

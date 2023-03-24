@@ -1,5 +1,5 @@
-import '#~/src/prototype';
-import { Sunfish, _options } from '../../../src/objects/Sunfish';
+import '../../../src/prototype/Number.prototype.js';
+import { Sunfish, _options } from '../../../src/objects/Sunfish.js';
 
 /**
  * @memberof Jest

@@ -1,4 +1,4 @@
-import { Statistic } from '#~/src/objects/Statistic';
+import { Statistic } from '../../../src/objects/Statistic.js';
 
 /**
  * @memberof Jest
