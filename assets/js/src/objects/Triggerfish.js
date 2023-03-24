@@ -4,6 +4,7 @@ const options = {
     creatureType: "triggerfish",
     creatureName: "Picasso Triggerfish",
     maxHealth: 100,
+    maxTime: 6000,
     favouredStat: 'hunger',
     specialAbilityName: "Trigger Attack",
     specialAbilityDescription: "The Picasso Triggerfish has strong, powerful jaws that it uses to crush and eat hard-shelled prey such as crustaceans, snails, and sea urchins. ",

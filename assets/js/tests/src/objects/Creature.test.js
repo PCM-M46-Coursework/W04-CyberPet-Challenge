@@ -14,6 +14,7 @@ describe('Creature', () =>
         creatureType: "test",
         creatureName: "Test",
         maxHealth: 500,
+        maxHealth: 5000,
         favouredStat: 'hunger',
         specialAbilityName: "Test",
         specialAbilityDescription: "Test"
@@ -96,6 +97,18 @@ describe('Creature', () =>
 
             // Act
             const actual = sut.creatureType;
+
+            // Assert
+            expect(actual).toBe(expected);
+        });
+
+        it("Should set the creature's max time.", () =>
+        {
+            // Arrange
+            const expected =  options.maxTime;
+
+            // Act
+            const actual = sut.maxTime;
 
             // Assert
             expect(actual).toBe(expected);
