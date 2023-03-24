@@ -1,6 +1,5 @@
-require('#~/src/prototype');
-const assert = require('assert');
-const { MantisShrimp, _options } = require('../../../src/objects/MantisShrimp');
+import '#~/src/prototype';
+import { MantisShrimp, _options } from '../../../src/objects/MantisShrimp';
 
 /**
  * @memberof Jest
@@ -8,6 +7,8 @@ const { MantisShrimp, _options } = require('../../../src/objects/MantisShrimp');
  */
 describe('MantisShrimp', () =>
 {
+    let sut;
+
     beforeEach(() =>
     {
         sut = new MantisShrimp("Bob");

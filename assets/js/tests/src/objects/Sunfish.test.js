@@ -1,6 +1,5 @@
-require('#~/src/prototype');
-const assert = require('assert');
-const { Sunfish, _options } = require('../../../src/objects/Sunfish');
+import '#~/src/prototype';
+import { Sunfish, _options } from '../../../src/objects/Sunfish';
 
 /**
  * @memberof Jest
@@ -8,6 +7,8 @@ const { Sunfish, _options } = require('../../../src/objects/Sunfish');
  */
 describe('Sunfish', () =>
 {
+    let sut;
+    
     beforeEach(() =>
     {
         sut = new Sunfish("Bob");
