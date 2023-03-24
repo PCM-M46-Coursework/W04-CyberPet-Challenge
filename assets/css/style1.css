@@ -1,0 +1,102 @@
+*{padding:0;margin:0}
+
+body{
+    background-color: aqua;
+    background-image: url("./assets/img/MicrosoftTeams-image.png");
+}
+
+.background-container{
+    width:100
+   background-image: url("./assets/img/background.jpg");
+   background-color: bisque;
+   width:100%;
+   height: 100%;
+}
+
+.title-container {
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    background-color: blueviolet;
+    display: flex;
+}
+
+.character-container{
+    width:750px;
+    display:flex;
+    justify-content:flex-start;
+    background-color:darkorange;
+}
+
+.Picasso-triggerfish{
+    height:168px;
+    width:168px;
+    background-color: chartreuse;
+    margin:10px;
+}
+
+.Ocean-sunfish{
+    background-color: deeppink;
+    height:168px;
+    width:168px;
+    margin:10px;
+}
+
+.Peacock-mantis-shrimp{
+    background-color: gold;
+    height:168px;
+    width:168px;
+    margin:10px;
+}
+
+.Decorator-crab{
+    background-color: red;
+    height:168px;
+    width:168px;
+
+    margin:10px;
+}
+
+.name-your-pet-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(219, 27, 237);
+    width:400px;
+}
+
+input{
+    width:380px;
+
+    border:2px;
+    color: #1991e8;
+
+}
+
+button {
+    width:200px;
+    justify-content:center;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin:10px;
+    text-align: center;
+  }
+
+footer{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+/* 
+start page needs "idStart" for start button. 
+"idSunfish", "idShrimp", "idTriggerfish" and "idCrab" on each image (or containing divs)
+
+start page needs "idName" on the text input
+
+ */
+ 
+ *{padding:0;margin:0}
+
+body{
+  /* background-color: hsl(48, 94%, 49%); */
+  background-image: url("/assets/img/background.jpg"), url("/assets/img/background.jpg");
+  background-repeat: no-repeat, repeat;
+ }
+ 
+.statsbar-container{
+  display:flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 600px;
+  background-color: aqua;
+
+
+}
+
+.hunger-holder{
+  color:black;
+  background-color: red;
+  width:300px;
+  height:20px;
+  border: 5px;
+}
+
+.hunger-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #555;
+    color: #000;
+    border-radius: 10px;
+  }
+
+  .Boredom-holder{
+    color:black;
+    background-color: red;
+    width:300px;
+    height:20px;
+    border: 5px;
+  }
+
+  .Boredom-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #555;
+    color: #000;
+    border-radius: 10px;
+  }
+
+  .Happiness-holder{
+    color:black;
+    background-color: red;
+    width:300px;
+    height:20px;
+    border: 5px;
+  }
+
+  .Happiness-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #555;
+    color: #000;
+    border-radius: 10px;
+  }
+
+  .Health-holder{
+    color:black;
+    background-color: red;
+    width:300px;
+    height:20px;
+    border: 5px;
+  }
+
+  .Health-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #555;
+    color: #000;
+    border-radius: 10px;
+  }
+
