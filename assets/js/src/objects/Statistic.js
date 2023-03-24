@@ -1,10 +1,10 @@
-require('#~/src/prototype');
+import '#~/src/prototype';
 
 /**
  * Represents a statistic that can be increased or decreased within a specified range.
  * @class
  */
-class Statistic
+export class Statistic
 {
     /**
      * @type {Number}
@@ -102,7 +102,3 @@ class Statistic
         this.#_currentValue = newValue.clamp(0, this.#_maxValue);
     }
 }
-
-module.exports = {
-    Statistic
-};

@@ -1,4 +1,4 @@
-const { Creature } = require('./Creature');
+import { Creature } from './Creature';
 
 const options = {
     creatureType: "shrimp",
@@ -17,7 +17,7 @@ const options = {
  * punches in the animal kingdom. It can strike its prey with a speed of 50 miles per
  * hour, which is strong enough to break glass or crack open a snail's shell.
  */
-class MantisShrimp extends Creature
+export class MantisShrimp extends Creature
 {
     /**
      * Initialises a new instance of the {@link MantisShrimp} class.
@@ -30,8 +30,4 @@ class MantisShrimp extends Creature
     }
 }
 
-module.exports = {
-    MantisShrimp
-};
-
-module.exports._options = options;
+export const _options = options;

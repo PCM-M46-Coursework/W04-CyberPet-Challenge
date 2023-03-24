@@ -1,4 +1,4 @@
-const { Statistic } = require('#~/src/objects/Statistic');
+import { Statistic } from '#~/src/objects/Statistic';
 
 /**
  * @memberof Jest

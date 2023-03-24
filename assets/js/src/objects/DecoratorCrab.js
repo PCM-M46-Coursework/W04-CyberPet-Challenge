@@ -1,4 +1,4 @@
-const { Creature } = require('./Creature');
+import { Creature } from './Creature';
 
 const options = {
     creatureType: "crab",
@@ -16,7 +16,7 @@ const options = {
  * Camouflage: The Decorator Crab is known for its ability to camouflage itself
  * by attaching bits of algae, seaweed, sponges, or other materials to its shell.
  */
-class DecoratorCrab extends Creature
+export class DecoratorCrab extends Creature
 {
     /**
      * Initialises a new instance of the {@link DecoratorCrab} class.
@@ -29,8 +29,4 @@ class DecoratorCrab extends Creature
     }
 }
 
-module.exports = {
-    DecoratorCrab
-};
-
-module.exports._options = options;
+export const _options = options;
