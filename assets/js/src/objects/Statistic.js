@@ -1,5 +1,9 @@
 require('#~/src/prototype');
 
+/**
+ * Represents a statistic that can be increased or decreased within a specified range.
+ * @class
+ */
 class Statistic
 {
     /**
@@ -15,12 +19,19 @@ class Statistic
     #_currentValue;
 
     /**
+     * @type {Number}
+     * @private
+     */
+    #_maxValue;
+
+    /**
      * Intialises a new instance of the {@link Statistic} class. 
      * @param {Number} intialValue - The initial value of the statistic.
      */
-    constructor(intialValue)
+    constructor(intialValue, maxValue = 100)
     {
-        this.#_initialValue = intialValue.clamp(0, 100);
+        this.#_maxValue = maxValue;
+        this.#_initialValue = intialValue.clamp(0, this.#_maxValue);
         this.#_currentValue = this.#_initialValue;
     }
 
@@ -32,6 +43,16 @@ class Statistic
     _getInitialValue()
     {
         return this.#_initialValue;
+    }
+
+    /**
+     * Gets the inital value assigned to the statistic.
+     * @returns {Number} - The initial value assigned to the statistic.
+     * @interal
+     */
+    _getMaxValue()
+    {
+        return this.#_maxValue;
     }
 
     /**
@@ -49,7 +70,7 @@ class Statistic
      */
     normalise()
     {
-        return this.getValue() / 100;
+        return this.getValue() / this.#_maxValue;
     }
     
     /**
@@ -59,7 +80,7 @@ class Statistic
     increaseBy(amount)
     {
         const newValue = this.getValue() + amount;
-        this.#_currentValue = newValue.clamp(0, 100);
+        this.#_currentValue = newValue.clamp(0, this.#_maxValue);
     }
     
     /**
@@ -69,7 +90,7 @@ class Statistic
     decreaseBy(amount)
     {
         const newValue = this.getValue() - amount;
-        this.#_currentValue = newValue.clamp(0, 100);
+        this.#_currentValue = newValue.clamp(0, this.#_maxValue);
     }
 }
 

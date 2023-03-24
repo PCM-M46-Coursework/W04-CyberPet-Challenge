@@ -22,6 +22,19 @@ describe('Statistic', () =>
             // Assert
             expect(actual).toBe(expected);
         });
+            
+        it('Should set the the inital value to 100, when instantiated implicitly.', () =>
+        {
+            // Arrange
+            const expected = 100;
+
+            // Act
+            stat = new Statistic(50);
+            const actual = stat._getMaxValue();
+
+            // Assert
+            expect(actual).toBe(expected);
+        });
 
         it('Should set the inital value to 0, when argument is negative.', () =>
         {
@@ -36,13 +49,13 @@ describe('Statistic', () =>
             expect(actual).toBe(expected);
         });
 
-        it('Should set the inital value to 100, when argument is greater.', () =>
+        it('Should set the inital value to max value, when argument is greater.', () =>
         {
             // Arrange
-            const expected = 100;
+            const expected = 500;
 
             // Act
-            stat = new Statistic(1000);
+            stat = new Statistic(1000, expected);
             const actual = stat._getInitialValue();
 
             // Assert
@@ -63,7 +76,6 @@ describe('Statistic', () =>
         });
     });
 
-    
     describe('Functionality', () =>
     {
         beforeEach(() =>
@@ -73,10 +85,15 @@ describe('Statistic', () =>
 
         describe('normalise', () =>
         { 
-            it('Should correctly normalise the current value.', () =>
+            test.each([
+                [0.5, 50, 100],
+                [1, 100, 100],
+                [0, 0, 100],
+                [0.2, 100, 500],
+              ])('Should correctly normalise the current value.', (expected, initialValue, maxValue) =>
             {
                 // Arrange
-                const expected = 0.5;
+                stat = new Statistic(initialValue, maxValue);
     
                 // Act
                 const actual = stat.normalise();
@@ -144,18 +161,5 @@ describe('Statistic', () =>
             });  
         });
     });
-
-});
-
-
-
-describe('', () =>
-{
-
-});
-
-
-it('', () =>
-{
 
 });
