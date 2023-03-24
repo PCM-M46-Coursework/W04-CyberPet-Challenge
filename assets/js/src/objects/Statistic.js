@@ -1,4 +1,4 @@
-import '#~/src/prototype';
+import '../prototype/Number.prototype.js';
 
 /**
  * Represents a statistic that can be increased or decreased within a specified range.

@@ -1,5 +1,5 @@
-import '#~/src/prototype';
-import { Creature } from '../../../src/objects/Creature';
+import '../../../src/prototype/Number.prototype.js';
+import { Creature } from '../../../src/objects/Creature.js';
 
 /**
  * @memberof Jest

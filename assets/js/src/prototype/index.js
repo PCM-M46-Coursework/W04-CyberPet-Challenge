@@ -1,1 +1,1 @@
-import './Number.prototype';
+import './Number.prototype.js';

@@ -1,4 +1,4 @@
-import { Creature } from './Creature';
+import { Creature } from './Creature.js';
 
 const options = {
     creatureType: "triggerfish",

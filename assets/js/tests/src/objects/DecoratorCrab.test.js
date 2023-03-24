@@ -1,5 +1,5 @@
-import '#~/src/prototype';
-import { DecoratorCrab, _options } from '../../../src/objects/DecoratorCrab';
+import '../../../src/prototype/Number.prototype.js';
+import { DecoratorCrab, _options } from '../../../src/objects/DecoratorCrab.js';
 
 /**
  * @memberof Jest

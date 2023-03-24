@@ -1,4 +1,4 @@
-// import { Class } from '#~/src/objects/Class.js';
+// import { Class } from '../../../src/objects/Class.js';
 
 /**
  * @memberof Jest

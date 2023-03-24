@@ -1,5 +1,5 @@
-import '#~/src/prototype';
-import { MantisShrimp, _options } from '../../../src/objects/MantisShrimp';
+import '../../../src/prototype/Number.prototype.js';
+import { MantisShrimp, _options } from '../../../src/objects/MantisShrimp.js';
 
 /**
  * @memberof Jest
