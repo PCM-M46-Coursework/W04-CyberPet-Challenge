@@ -1,6 +1,5 @@
-require('#~/src/prototype');
-const assert = require('assert');
-const { Triggerfish, _options } = require('../../../src/objects/Triggerfish');
+import '#~/src/prototype';
+import { Triggerfish, _options } from '../../../src/objects/Triggerfish';
 
 /**
  * @memberof Jest
@@ -8,6 +7,8 @@ const { Triggerfish, _options } = require('../../../src/objects/Triggerfish');
  */
 describe('Triggerfish', () =>
 {
+    let sut;
+    
     beforeEach(() =>
     {
         sut = new Triggerfish("Bob");

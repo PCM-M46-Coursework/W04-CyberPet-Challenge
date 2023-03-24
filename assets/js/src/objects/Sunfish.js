@@ -1,4 +1,4 @@
-const { Creature } = require('./Creature');
+import { Creature } from './Creature';
 
 const options = {
     creatureType: "sunfish",
@@ -18,7 +18,7 @@ const options = {
  * is thought to help the fish regulate its body temperature and may also help
  * it remove parasites from its skin.
  */
-class Sunfish extends Creature
+export class Sunfish extends Creature
 {
     /**
      * Initialises a new instance of the {@link Sunfish} class.
@@ -31,8 +31,4 @@ class Sunfish extends Creature
     }
 }
 
-module.exports = {
-    Sunfish
-};
-
-module.exports._options = options;
+export const _options = options;
