@@ -4,59 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megagotchi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet1" href="style.css">
 </head>
 
 <body>
-    <div class="background-container">
-        
+    <div class="background-container">        
         <div class="title-container">
             <img src="\assets\img\megagotchi.png" alt="Picasso">
+
+            <audio controls autoplay>
+                <source src="horse.ogg" type="audio/ogg">
+                <source src="horse.mp3" type="audio/mpeg">
+            </audio>
         </div>
-
-                <div class="main-container">
-
-                    <div class="character-container">
-
-                        <div class="Picasso-triggerfish">
-                            <img src="\assets\img\fish1.gif" alt="Picasso">
-                        </div>
-
-                        <div class="Ocean-sunfish">
-                            <img src="\assets\img\fish2.gif" alt="Picasso">
-                        </div>
-
-                        <div class="Peacock-mantis-shrimp">
-                            <img src="\assets\img\fish3.gif" alt="Picasso">
-                        </div>
-
-                        <div class="Decorator-crab">
-                            <img src="\assets\img\fish4.gif" alt="Picasso">
-                        </div>
-
-                        </div>
-
-                        <div class="name-your-pet-container">
-                            <div> <img src="\assets\img\name-your-pet.png" alt="Name your pet"></div>
-                            <input type="text" name="Name" placeholder="Enter name">
-                            <button type="submit">Click to start</button>
-                        </div>
-
-                    </div>
+        <div class="main-container">
+            <div class="character-container">
+                <div class="Picasso-triggerfish" id="idTriggerfish">
+                    <img src="\assets\img\fish1.gif" alt="Picasso">
                 </div>
+
+                <div class="Ocean-sunfish" id="idSunfish">
+                    <img src="\assets\img\fish2.gif" alt="Picasso">
+                </div>
+
+                <div class="Peacock-mantis-shrimp" id="idShrimp">
+                    <img src="\assets\img\fish3.gif" alt="Picasso">
+                </div>
+
+                <div class="Decorator-crab" id="idCrab">
+                    <img src="\assets\img\fish4.gif" alt="Picasso">
+                </div>
+
+                </div>
+
+                <div class="name-your-pet-container">
+                    <div> 
+                        <img src="\assets\img\name-your-pet.png" alt="Name your pet">
+                    </div>
+                    <input type="text" id="idName" placeholder="Enter name">
+                    <button type="submit" id="idStart">Click to start</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer> 
-
-        &copy; Copyright (CN) team 4 (Mauricio, Peter, Ramon, Stephen) 
-
+        <h1>They need you</h1>
+        &copy; Copyright (CN) team 4 
     </footer>
 
-    <audio src="" controls />
+    <audio src="" controls >
     
-<script src="./app.js"></script>
+    <script type="module" src=".\assets\js\start.js"></script>
 </body>
-
-</body>
-
 </html>
