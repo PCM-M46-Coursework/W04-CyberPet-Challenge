@@ -103,6 +103,26 @@ describe('Statistic', () =>
             });
         });
 
+        describe('inverseNormalise', () =>
+        { 
+            test.each([
+                [0.5, 50, 100],
+                [0, 100, 100],
+                [1, 0, 100],
+                [0.8, 100, 500],
+              ])('Should correctly normalise the current value.', (expected, initialValue, maxValue) =>
+            {
+                // Arrange
+                stat = new Statistic(initialValue, maxValue);
+    
+                // Act
+                const actual = stat.inverseNormalise();
+    
+                // Assert
+                expect(actual).toBe(expected);
+            });
+        });
+
         describe('increaseBy', () =>
         { 
             it('Should correctly increase the current value.', () =>

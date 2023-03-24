@@ -72,6 +72,15 @@ class Statistic
     {
         return this.getValue() / this.#_maxValue;
     }
+
+    /**
+     * Gets the inversely normalised value of the statistic.
+     * @returns {Number} - The inversely normalised value of the statistic.
+     */
+    inverseNormalise()
+    {
+        return 1 - (this.getValue() / this.#_maxValue);
+    }
     
     /**
      * Increases the statistic by a given amount.
