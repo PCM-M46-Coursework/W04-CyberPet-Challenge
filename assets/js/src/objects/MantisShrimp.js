@@ -4,6 +4,7 @@ const options = {
     creatureType: "shrimp",
     creatureName: "Peacock Mantis Shrimp",
     maxHealth: 150,
+    maxTime: 3000,
     favouredStat: 'hunger',
     specialAbilityName: "Sonic Punch",
     specialAbilityDescription: "The Peacock Mantis Shrimp has one of the fastest and most powerful punches in the animal kingdom. It can strike its prey with a speed of 50 miles per hour, which is strong enough to break glass or crack open a snail's shell."

@@ -4,6 +4,7 @@ const options = {
     creatureType: "sunfish",
     creatureName: "Ocean Sunfish",
     maxHealth: 500,
+    maxTime: 8000,
     favouredStat: 'happiness',
     specialAbilityName: "Sunbathe",
     specialAbilityDescription: "The Ocean Sunfish is known to sunbathe at the surface of the water, floating on its side with its dorsal fin out of the water. This behaviour is thought to help the fish regulate its body temperature and may also help it remove parasites from its skin."

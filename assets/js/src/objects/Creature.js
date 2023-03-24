@@ -94,6 +94,15 @@ class Creature
     {
         return this[this.#_options.favouredStat];
     }
+
+    /**
+     * The maximum timing interval for the creature's stats to drop.
+     * @returns {Statistic} - The intial, and maximum time, in milliseconds, before the stats start dropping.
+     */
+    get maxTime()
+    {
+        return this[this.#_options.maxTime];
+    }
 }
 
 module.exports = {

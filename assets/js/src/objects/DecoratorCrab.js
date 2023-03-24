@@ -4,6 +4,7 @@ const options = {
     creatureType: "crab",
     creatureName: "Decorator Crab",
     maxHealth: 100,
+    maxTime: 5000,
     favouredStat: 'boredom',
     specialAbilityName: "Camouflage",
     specialAbilityDescription: "The Decorator Crab is known for its ability to camouflage itself by attaching bits of algae, seaweed, sponges, or other materials to its shell."
