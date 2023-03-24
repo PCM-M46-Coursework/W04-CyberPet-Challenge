@@ -1,8 +1,17 @@
-// Globals
-let objPet = {}; //the pet
-let intTimer = 0; //the value of the on-screen count-down counter
+// pet.health.getValue();
+// pet.health.normalise();
+// pet.health.increaseBy();
+// pet.health.decreaseBy();
+
+// const pet = new MantisShrimp(petName);
+
+
+//Globals
+const objPet={};
+let intTimer = 0; //the value of the count-down counter
 let intMaxTime = 0; //the max time that the countdown counter can be set to
 let fIncrease = 0.1; //amount to alter stats by after each timer tick
+let intAge = 0; //age of creature
 
 document.onload = (() => {
     start();
@@ -14,98 +23,97 @@ function makePet(){
     console.log("makepet");
     let strName= localStorage.getItem("name");
     let strType =localStorage.getItem("type");
+    
+    const pet = {};
     switch (strType) {
         case "SunFish":
-            objPet = new clsSunfish(strName);
+            pet = new Sunfish(strName);
             break;
         case "Shrimp":
-            objPet = new clsShrimp(strName);
+            pet = new MantisShrimp(strName);
             break;
         case "TriggerFish":
-            objPet = new clsTriggerFish(strName);
+            pet = new TriggerFish(strName);
             break;
         case "Crab":
-            objPet = new clsCrab(strName);
+            pet = new Crab(strName);
             break;
     };
-    intMaxTime = objPet.intMaxTime;
+    intMaxTime = pet.maxTime.getValue();
     intTimer = intMaxTime;
+    return pet;
 };
 
 // Button Code
 //react to button presses by calling appropriate update methods of objPet
-document.getElementById("idFeed").addEventListener("click", fnUpdateHunger());
-document.getElementById("idWater").addEventListener("click", fnUpdateThirst());
-document.getElementById("idPlay").addEventListener("click", fnUpdateBoredom());
-document.getElementById("idPet").addEventListener("click", fnUpdateHappiness());
+document.getElementById("idFeed").addEventListener("click", updateHunger());
+document.getElementById("idSpecial").addEventListener("click", updateSpecial());
+document.getElementById("idPlay").addEventListener("click", updateBoredom());
+document.getElementById("idPet").addEventListener("click", updateHappiness());
 
-function fnUpdateHunger(){
-    objPet.UpdateHunger();
-    IncreaseHealth();
+function updateHunger(){
+    objPet.hunger.decreaseBy(10);
+    increaseHealth(10);
     updateMaxTimer();
 };
-function fnUpdateThirst(){
-    objPet.UpdateThirst();
-    IncreaseHealth();
+function updateSpecial(){
+    objPet.special.increaseBy(10);
+    increaseHealth(10);
     updateMaxTimer();
 };
-function fnUpdateBoredom(){
-    objPet.UpdateBoredom();
-    IncreaseHealth();
+function updateBoredom(){
+    objPet.boredom.decreaseBy(10);
+    increaseHealth(10);
     updateMaxTimer();
 };
-function fnUpdateHappiness(){
-    objPet.UpdateHappiness();
-    IncreaseHealth();
+function updateHappiness(){
+    objPet.happiness.increaseBy(10);
+    increaseHealth(10);
     updateMaxTimer();
 };
-function IncreaseHealth(){
-    objPet.IncreaseHealth();
+function increaseHealth(intAmount){
+    objPet.health.increaseBy(intAmount);
     updateMaxTimer();
 };
 //event timer
 function updateMaxTimer(){
     //integer value from (percentage)floats * max Possible timer value
-    intMaxTime = Math.round(objPet.intMaxTime * (1.1-objPet.Boredom) * (1.1-objPet.Thirst) * (1.1-objPet.Hunger) * (objPet.happiness +0.1));
+    intMaxTime = Math.min(Math.round(objPet.maxTime.getValue() * objPet.boredom.normalise() * objPet.hunger.normalise() * objPet.happiness.getValue()), 100);
     intTimer = intMaxTime;
-    document.getElementById(idTimer).value = intTimer;
+    //document.getElementById(idTimer).value = intTimer; //no longer displaying timer
 };
-function fnUpdatePet(){
-    objPet.boredom += fIncrease; //everything increases with every timer tick
-    objPet.thirst += fIncrease;
-    objPet.hunger += fIncrease;
-    objPet.Happiness -= fIncrease; //except happiness and health which decreases
-    objPet.Health -= fIncrease;
+function updatePet(){
+    objPet.boredom.increaseBy(fIncrease); //everything increases with every timer tick
+    objPet.hunger.increaseBy(fIncrease);
+    objPet.happiness.decreaseBy(fIncrease); //except happiness and health which decreases
+    objPet.health.decreaseBy(fIncrease);
     //check death condition
-    if (objPet.Health <= 0){
+    if (objPet.health.getValue() <= 0){
         window.location="deathScreen.html";
     };
 };
-function fnUpdateDisplay(){    //Interface Updates
-    document.getElementById("idHunger").style.width = objPet.Hunger * document.getElementById("idHunger").style.maxWidth;
-    document.getElementById("idThirst").style.width = objPet.Thirst * document.getElementById("idThirst").style.maxWidth;
-    document.getElementById("idBoredom").style.width = objPet.Boredom * document.getElementById("idBoredom").style.maxWidth;
-    document.getElementById("idHappiness").style.width = objPet.Happiness * document.getElementById("idHappiness").style.maxWidth;
-    document.getElementById("idHealth").style.width = objPet.Health * document.getElementById("idHealth").style.maxWidth;
-
-    document.getElementById("idTimerDisplay").style.value = intTimer; //add formatting if needed
-    document.getElementById("idAge").value = objPet.age; //add formatting if needed
+function updateDisplay(){    //Interface Updates
+    document.getElementById("idHunger").style.width = objPet.hunger.normalise() * document.getElementById("idHunger").style.maxWidth;
+    document.getElementById("idBoredom").style.width = objPet.boredom.normalise() * document.getElementById("idBoredom").style.maxWidth;
+    document.getElementById("idHappiness").style.width = objPet.happiness.getValue() * document.getElementById("idHappiness").style.maxWidth;
+    document.getElementById("idHealth").style.width = objPet.health.getvalue() * document.getElementById("idHealth").style.maxWidth;
+    document.getElementById("idAge").value = intAge; //add formatting if needed
 };
 function doTime(){
-    intTimer -=1;
-    objPet.age += 1; //update age of pet
+    intTimer -=1000;
+    intAge.increaseBy(1); //update age of pet
     if (intTimer <= 0){ //timer reaches zero :- Update pet properties
-        fnUpdatePet(); //increase hunger, thirst, boredom, decrease health and happiness
-        fnUpdateDisplay(); //include timer and age in this function
+        updatePet(); //increase hunger, thirst, boredom, decrease health and happiness
+        updateDisplay(); //include timer and age in this function
         intTimer = intMaxTime;
     };
-    document.getElementById(idTimer).value = intTimer; //maybe needs formatting too
+    //document.getElementById(idTimer).value = intTimer; //maybe needs formatting too
     setInterval(doTime, 1000); //run timer check every 1 second
 };
 function start(){
     console.log("Start");
-    makePet(); //instantiate pet
-    fnUpdateDisplay(); //draw display values
-    setInterval(doTime, 1000); //start the game loop
+    objPet = makePet(); //instantiate pet
+    updateDisplay(); //draw display values
+    doTime(); //start the game loop
 };
 
