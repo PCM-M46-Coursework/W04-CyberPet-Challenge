@@ -1,11 +1,11 @@
-require('#~/src/prototype');
-const { Statistic } = require('./Statistic');
+import '#~/src/prototype';
+import { Statistic } from './Statistic';
 
 /**
  * Acts as a base class for all creatures provided as choices for the game.
  * @class
  */
-class Creature
+export class Creature
 {
     /**
      * @type {Object}
@@ -104,7 +104,3 @@ class Creature
         return this[this.#_options.maxTime];
     }
 }
-
-module.exports = {
-    Creature
-};

@@ -1,6 +1,5 @@
-require('#~/src/prototype');
-const assert = require('assert');
-const { DecoratorCrab, _options } = require('../../../src/objects/DecoratorCrab');
+import '#~/src/prototype';
+import { DecoratorCrab, _options } from '../../../src/objects/DecoratorCrab';
 
 /**
  * @memberof Jest
@@ -8,6 +7,8 @@ const { DecoratorCrab, _options } = require('../../../src/objects/DecoratorCrab'
  */
 describe('DecoratorCrab', () =>
 {
+    let sut;
+
     beforeEach(() =>
     {
         sut = new DecoratorCrab("Bob");

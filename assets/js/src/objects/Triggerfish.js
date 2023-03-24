@@ -1,4 +1,4 @@
-const { Creature } = require('./Creature');
+import { Creature } from './Creature';
 
 const options = {
     creatureType: "triggerfish",
@@ -16,7 +16,7 @@ const options = {
  * Trigger Attack:  The Picasso Triggerfish has strong, powerful jaws that it uses
  * to crush and eat hard-shelled prey such as crustaceans, snails, and sea urchins. 
  */
-class Triggerfish extends Creature
+export class Triggerfish extends Creature
 {
     /**
      * Initialises a new instance of the {@link Triggerfish} class.
@@ -29,8 +29,4 @@ class Triggerfish extends Creature
     }
 }
 
-module.exports = {
-    Triggerfish
-};
-
-module.exports._options = options;
+export const _options = options;

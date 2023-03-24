@@ -1,5 +1,5 @@
-const assert = require('assert');
-require('#~/src/prototype/Number.prototype.js');
+import '#~/src/prototype';
+import assert from 'assert';
 
 /**
  * @memberof Jest

@@ -1,6 +1,5 @@
-require('#~/src/prototype');
-const assert = require('assert');
-const { Creature } = require('../../../src/objects/Creature');
+import '#~/src/prototype';
+import { Creature } from '../../../src/objects/Creature';
 
 /**
  * @memberof Jest

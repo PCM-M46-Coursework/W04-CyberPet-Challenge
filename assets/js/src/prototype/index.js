@@ -1,1 +1,1 @@
-require('./Number.prototype');
+import './Number.prototype';

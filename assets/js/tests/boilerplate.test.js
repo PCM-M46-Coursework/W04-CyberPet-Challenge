@@ -1,5 +1,4 @@
-const assert = require('assert');
-// const { Class } = require('#~/src/objects/Class');
+// import { Class } from '#~/src/objects/Class.js';
 
 /**
  * @memberof Jest
