@@ -27,22 +27,20 @@ soundManager.playRandomOnClick('button.action', [
 //  INDEX PAGE
 // ================================================
 
-if (window.location.pathname == '/') {
-    soundManager.playOnClick('#btnStartGame', 'startGame');
-    soundManager.playOnHover('.creature-image', 'buttonHover');
-    soundManager.playOnEvent('focus', '#txtPetName', 'buttonClick');
-    soundManager.playRandomOnEvent('input', '#txtPetName', [
-        'type1', 'type2', 'type3', 'type4'
-    ]);
-    soundManager.playRandomOnClick('.creature-image', [
-        'choosePet1', 'choosePet2'
-    ]);
-}
+soundManager.playOnClick('#btnStartGame', 'startGame');
+soundManager.playOnHover('.creature-image', 'buttonHover');
+soundManager.playOnEvent('focus', '#txtPetName', 'buttonClick');
+soundManager.playRandomOnEvent('input', '#txtPetName', [
+    'type1', 'type2', 'type3', 'type4'
+]);
+soundManager.playRandomOnClick('.creature-image', [
+    'choosePet1', 'choosePet2'
+]);
 
 // ================================================
 //  GAME PLAY
 // ================================================
 
-if (window.location.pathname == '/game-play.html') {
+if (window.location.pathname.endsWith('/game-play.html')) {
     soundManager.playOnClick('#btnSpecialAbility', 'specialAbility');
 }
