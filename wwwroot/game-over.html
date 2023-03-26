@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over! • Megagotchi</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/audio.css">
+    <link rel="stylesheet" href="./assets/css/site-wide.css" />
+    <link rel="stylesheet" href="./assets/css/game-over.css">
+    <script type="module" src="./assets/js/audio.js" defer></script>
+    <script type="module" src="./assets/js/game-over.js" defer></script>
+</head>
+
+<body>
+    <div id="page-container" class="flex">
+        <header class="flex">
+            <!-- BEGIN Header Content -->
+            <section id="audio-section">
+                <audio loop controls controlsList="novolume nodownload noplaybackrate">
+                    <source src="./assets/audio/bg-music.ogg" />
+                    <source src="./assets/audio/bg-music.mp3" />
+                </audio>
+            </section>
+            <section id="logo-section">
+                <img src="./assets/img/title-megagotchi.png" title="Megagotchi" alt="Megagotchi" />
+            </section>
+            <nav id="nav-bar">
+                <i id="nav-button" class="fa-solid fa-bars" closed></i>
+                <div id="menu" class="box" hidden>
+                    <!-- BEGIN Popup Menu Content -->
+                    <h1>Credits</h1>
+                    <div>
+                        <div>
+                            <h2>Peter C. Matthews</h2>
+                            <span>Team Lead - JavaScript</span></li>
+                        </div>
+                        <div>
+                            <h2>Stephen McKeown</h2>
+                            <span>HTML - Graphical Design</span></li>
+                        </div>
+                        <div>
+                            <h2>Mauricio Banados-Cornejo</h2>
+                            <span>Wireframing & CSS</span></li>
+                        </div>
+                        <div>
+                            <h2>Ramon Merrell</h2>
+                            <span>JS DOM</span>
+                        </div>
+                    </div>
+                    <div class="megaquarium">
+                        <p>This mini-game is inspired by Megaquarium, by Twice Cricled.</p>
+                        <a href="https://store.steampowered.com/app/600480/Megaquarium/" target="_blank">
+                            <img src="./assets/img/mq-logo.png" title="Buy Megaquarium on Steam" alt="Megaquarium Logo" />
+                            <p>Buy game on Steam</p>
+                        </a>
+                    </div>
+                    <!-- END Popup Menu Content -->
+                </div>
+            </nav>
+            <!-- BEGIN Header Content -->
+        </header>
+
+        <main class="flex window">
+            <!-- BEGIN Page Content -->
+            <div class="box info-box">
+                <h1>GAME OVER!</h1>
+                <h2><span class="strPetName">Your pet</span> Died!</h2>
+                <div class="creature-image">
+                    <img id="imgAvatar" src="https://via.placeholder.com/170" />
+                </div>
+                <p class="feedback">You kept your
+                    <span class="strCreatureName">Creature</span> alive for
+                    <span class="strAge">some time</span>.
+                </p>
+            </div>
+            <!-- END Page Content -->
+        </main>
+
+        <footer class="flex">
+            <!-- BEGIN Footer Content -->
+            <a href="./" target="_self">
+                <button class="btn btn-primary">Start again?</button>
+            </a>
+            <!-- END Footer Content -->
+        </footer>
+    </div>
+</body>
+</html>

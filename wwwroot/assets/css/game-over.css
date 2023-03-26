@@ -1,0 +1,18 @@
+.window {
+    justify-items: center;
+    column-gap: 3ch;
+    padding: 3ch;
+    height: 100%;
+}
+
+.window h2 {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.info-box {
+    font-size: 1.5em;
+    text-align: center;
+    width: 50vw;
+    line-height: 1.5;
+}

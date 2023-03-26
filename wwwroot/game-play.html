@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game • Megagotchi</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/audio.css">
+    <link rel="stylesheet" href="./assets/css/site-wide.css" />
+    <link rel="stylesheet" href="./assets/css/game-play.css">
+    <script type="module" src="./assets/js/audio.js" defer></script>
+    <script type="module" src="./assets/js/game-play.js" defer></script>
+</head>
+
+<body>
+    <div id="page-container" class="flex">
+        <header class="flex">
+            <!-- BEGIN Header Content -->
+            <section id="audio-section">
+                <audio loop controls controlsList="novolume nodownload noplaybackrate">
+                    <source src="./assets/audio/bg-music.ogg" />
+                    <source src="./assets/audio/bg-music.mp3" />
+                </audio>
+            </section>
+            <section id="logo-section">
+                <img src="./assets/img/title-megagotchi.png" title="Megagotchi" alt="Megagotchi" />
+            </section>
+            <nav id="nav-bar">
+                <i id="nav-button" class="fa-solid fa-bars" closed></i>
+                <div id="menu" class="box" hidden>
+                    <!-- BEGIN Popup Menu Content -->
+                    <h1>Credits</h1>
+                    <div>
+                        <div>
+                            <h2>Peter C. Matthews</h2>
+                            <span>Team Lead - JavaScript</span></li>
+                        </div>
+                        <div>
+                            <h2>Stephen McKeown</h2>
+                            <span>HTML - Graphical Design</span></li>
+                        </div>
+                        <div>
+                            <h2>Mauricio Banados-Cornejo</h2>
+                            <span>Wireframing & CSS</span></li>
+                        </div>
+                        <div>
+                            <h2>Ramon Merrell</h2>
+                            <span>JS DOM</span>
+                        </div>
+                    </div>
+                    <div class="megaquarium">
+                        <p>This mini-game is inspired by Megaquarium, by Twice Cricled.</p>
+                        <a href="https://store.steampowered.com/app/600480/Megaquarium/" target="_blank">
+                            <img src="./assets/img/mq-logo.png" title="Buy Megaquarium on Steam"
+                                alt="Megaquarium Logo" />
+                            <p>Buy game on Steam</p>
+                        </a>
+                    </div>
+                    <!-- END Popup Menu Content -->
+                </div>
+            </nav>
+            <!-- BEGIN Header Content -->
+        </header>
+
+        <main class="flex">
+            <!-- BEGIN Page Content -->
+            <section class="flex game-window">
+
+                <!-- BEGIN Left Container -->
+                <section class="box info-box creature-container">
+                    <div>
+                        <p class="strCreatureName">Peacock Mantis Shrimp</p>
+                        <div id="txtSpecialAbility"></div>
+                    </div>
+                    <div>
+                        <p class="strPetName">Bob</p>
+                        <img class="creature-image" id="imgAvatar" src="https://via.placeholder.com/170" />
+                        <button id="btnSpecialAbility" class="btn btn-primary">Special Ability</button>
+                        <button id="btnTerminate" class="btn btn-secondary">Terminate</button>
+                    </div>
+                </section>
+                <!-- END Left Container -->
+
+                <!-- BEGIN Right Container -->
+                <section class="box info-box stats-container">
+                    <div class="stat-row">
+                        <div>
+                            <p>HEALTH</p>
+                        </div>
+                        <meter id="idHealthBar" min="0" max="100" value="100">
+                        </meter>
+                    </div>
+                    <div class="stat-row">
+                        <div>
+                            <p>HUNGER</p>
+                            <button id="btnHunger" class="btn btn-primary action">Feed</button>
+                        </div>
+                        <meter class="inverse" id="idHungerBar" min="0" max="100" value="0">
+                        </meter>
+                    </div>
+                    <div class="stat-row">
+                        <div>
+                            <p>BOREDOM</p>
+                            <button id="btnBoredom" class="btn btn-primary action">Play</button>
+                        </div>
+                        <meter class="inverse" id="idBoredomBar" min="0" max="100" value="0">
+                        </meter>
+                    </div>
+                    <div class="stat-row">
+                        <div>
+                            <p>HAPPINESS</p>
+                            <button id="btnHappiness" class="btn btn-primary action">Pet</button>
+                        </div>
+                        <meter id="idHappinessBar" min="0" max="100" value="100">
+                        </meter>
+                    </div>
+                </section>
+                <!-- END Right Container -->
+
+            </section>
+            <!-- END Page Content -->
+        </main>
+
+        <footer class="flex">
+            <!-- BEGIN Footer Content -->
+            <!-- END Footer Content -->
+        </footer>
+    </div>
+</body>
+</html>
