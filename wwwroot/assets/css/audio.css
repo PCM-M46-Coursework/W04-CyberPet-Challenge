@@ -1,0 +1,40 @@
+/**
+ * Google Chrome works very strangely with audio tags,
+ * so I've had to create this style sheet, just to make
+ * the audio element look consistent across browsers.
+ *
+ */
+
+ audio {
+    padding: 1px;
+    width: 100px;
+    height: 40px;
+    margin-top: 1.5rem;
+    border-radius: 50px;
+    background-color: var(--theme-highlight-colour);
+    box-shadow: 0 0 10px 1px var(--theme-fore-colour);
+}
+
+audio::-webkit-media-controls-enclosure
+{
+    padding-left: 25%;
+    background-color: rgba(0, 0, 0, 0.75)!important;
+}
+
+audio::-webkit-media-controls-overlay-enclosure,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-timeline-container,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-fullscreen-button,
+audio::-webkit-media-controls-rewind-button,
+audio::-webkit-media-controls-return-to-realtime-button,
+audio::-webkit-media-controls-toggle-closed-captions-button
+{
+    display: none!important;
+}

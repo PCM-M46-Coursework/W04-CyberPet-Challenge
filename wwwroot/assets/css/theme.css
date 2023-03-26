@@ -1,0 +1,41 @@
+/* ========================================================= */
+/*  IMPORTS
+/* ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+/* ========================================================= */
+/*  RESET
+/* ========================================================= */
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+}
+
+[hidden],
+[hidden] * {
+    display: none!important;
+    visibility: hidden!important;
+    opacity: 0!important;
+}
+
+/* ========================================================= */
+/*  THEME VARIABLES
+/* ========================================================= */
+
+:root {
+    --theme-fore-colour: rgb(45, 202, 248);
+    --theme-highlight-colour: rgb(79, 236, 250);
+    --theme-lowlight-colour: #0BA8D6;
+    --theme-inverse-colour: #D23507;
+    --theme-inverse-highlight-colour: rgb(244, 87, 41);
+    --theme-inverse-lowlight-colour: #B01305;
+    --theme-bright-colour: #f5f5f5;
+    --theme-dark-colour: #131313;
+
+    --theme-light-shadow: #5f5f5f;
+    --theme-dark-shadow: #000000;
+}

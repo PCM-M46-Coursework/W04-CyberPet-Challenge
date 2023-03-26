@@ -1,0 +1,148 @@
+/* ========================================================= */
+/*  CONTAINERS
+/* ========================================================= */
+
+.game-window {
+    justify-items: center;
+    column-gap: 3ch;
+    padding: 3ch;
+    height: 100%;
+}
+
+.info-box {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5;
+    width: 30vw;
+    box-shadow: inset 0 0 10px 3px var(--theme-lowlight-colour);
+    box-shadow: 0 0 10px 2px var(--theme-highlight-colour);
+}
+
+/* ========================================================= */
+/*  CREATURE SECTION
+/* ========================================================= */
+
+.creature-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.creature-container > div:first-child {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1ch;
+}
+
+.creature-container > div:last-child {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    row-gap: 1ch;
+}
+
+.creature-container button {
+    font-size: 1.3rem;
+    align-self: stretch;
+}
+
+.creature-image {
+    line-height: 0;
+    padding: 3px;
+    background-color: #00999999;
+    border: 1px solid var(--theme-bright-colour);
+    align-self: center;
+    box-shadow: inset 0 0 10px 3px var(--theme-lowlight-colour);
+    box-shadow: 0 0 10px 2px var(--theme-highlight-colour);
+}
+
+#txtSpecialAbility {
+    height: 50%;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* ========================================================= */
+/*  STATS SECTION
+/* ========================================================= */
+
+.stat-row {
+    text-align: left;
+}
+
+.stat-row div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-row p {
+    font-weight: 500;
+}
+
+.stat-row button {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100px;
+}
+
+.stat-bar {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5;
+    width: 30vw;
+}
+
+/* ========================================================= */
+/*  STATISTIC METERS
+/*
+/*  These elements require different styles, depending on if
+/*  you are using Firefox, or Chrome. Safari should look the
+/*  same as Chrome.
+/*  
+/*  Here, we are overriding the default colour scheme, only
+/*  showing a single colour, from 0 to 100%.
+/* ========================================================= */
+
+meter,
+meter::-webkit-meter-bar  {
+    width: 100%;
+    height: 20px;
+    margin-block: 20px;
+    border-radius: 20px;
+    border: solid 1px #f5f5f5f5;
+    background: #e6e6e9;
+}
+
+/* The statistics bars are light blue in colour. */
+
+/* Chrome, Safari. */
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+    background: var(--theme-lowlight-colour);
+}
+
+/* Firefox */
+meter::-moz-meter-bar {
+    background: var(--theme-lowlight-colour);
+}
+
+/* The health bar is red in colour. */
+
+/* Chrome, Safari. */
+#idHealthBar::-webkit-meter-optimum-value,
+#idHealthBar::-webkit-meter-suboptimum-value,
+#idHealthBar::-webkit-meter-even-less-good-value {
+    background: var(--theme-inverse-lowlight-colour);
+}
+
+/* Firefox */
+#idHealthBar::-moz-meter-bar {
+    background: var(--theme-inverse-lowlight-colour);
+}
